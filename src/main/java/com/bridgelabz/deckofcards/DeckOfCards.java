@@ -3,8 +3,8 @@ package com.bridgelabz.deckofcards;
 public class DeckOfCards {
 	private String suits;
 	private String ranks;
-	private static final int NB_PLAYER = 4;
-    private static final int NB_CARD_BY_PLAYER = 9;
+	private static final int numOfPlayer = 4;
+    private static final int numOfCardByPlayer = 9;
 public static void main(String[] args) {
 	    // you loop as much as the number of players
 	    // your increment step is the number of cards to deal by player
@@ -35,13 +35,13 @@ public void initialGame() {
         deck[r] = deck[i];
         deck[i] = temp;
     }
-    for (int i = 0; i < NB_PLAYER * NB_CARD_BY_PLAYER; i = i + NB_CARD_BY_PLAYER) {
+    for (int i = 0; i < numOfPlayer * numOfCardByPlayer; i = i + numOfCardByPlayer) {
         System.out.println("player " + playerNumber + ", cards =");
         // you loop as much as the number of cards to deal by player
         // your start from the last dealed card 
         // your increment step is 1 as you want to deal card by card from the deck
         // your end condition is the number of cards to deal by player
-        for (int j = i; j < i+NB_CARD_BY_PLAYER; j++) {
+        for (int j = i; j < i+numOfCardByPlayer; j++) {
             System.out.println(deck[j]);
         }
         playerNumber++;
