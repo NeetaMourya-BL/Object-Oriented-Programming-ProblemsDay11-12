@@ -5,7 +5,11 @@ public class DeckOfCards {
 	private String ranks;
 	private static final int numOfPlayer = 4;
     private static final int numOfCardByPlayer = 9;
-public static void main(String[] args) {
+	private static final int deckOfCard = 0;
+	int[][] numOfCards = new int[4][9];
+   public static void main(String[] args) {
+	int[] numOfCards = new int[52];
+	
 	    // you loop as much as the number of players
 	    // your increment step is the number of cards to deal by player
 	    // your end condition is the number of cards you have to
@@ -13,11 +17,11 @@ public static void main(String[] args) {
 	System.out.println("Welcome to deck of cards");
 	DeckOfCards cards=new DeckOfCards();
 	cards.initialGame();
+	cards.printCard();
 }
 // initialGame method for Setup the initial game with deck of cards and make sure we have unique cards
 public void initialGame() {
 	 int playerNumber = 1;
-	int[] numOfCards = new int[52];
     String[] suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
     String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
     // initialize deck
@@ -46,5 +50,19 @@ public void initialGame() {
         }
         playerNumber++;
 }
+}
+public void printCard() {
+    for(int i = 0; i<numOfPlayer; i++)
+        for(int j = 0; j<numOfCardByPlayer; j++)
+        	numOfCards[i][j] = 0;
+
+    for(int i = 0; i<numOfPlayer; i++)
+    {
+        for(int j = 0; j<numOfCardByPlayer; j++)
+        {
+            System.out.print(numOfCards[i][j]);
+        }
+        System.out.println();
+    }
 }
 }
