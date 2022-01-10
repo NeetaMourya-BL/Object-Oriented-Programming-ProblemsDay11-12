@@ -40,5 +40,14 @@ public class Stock {
 		this.numberOfShare = numberOfShare;
 		this.sharePrice = sharePrice;
 	}
+
+	public Stock(String filename, Object n, int sharePrice2) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Object readLine() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }
